@@ -1,0 +1,6 @@
+[submodule "src/vendor/github.com/sesmith177/go-ce-test"]
+	path = src/vendor/github.com/sesmith177/go-ce-test
+	url = https://github.com/sesmith177/go-ce-test
+[submodule "src/vendor/github.com/go-yaml/yaml"]
+	path = src/vendor/github.com/go-yaml/yaml
+	url = https://github.com/go-yaml/yaml
