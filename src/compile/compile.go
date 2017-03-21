@@ -15,13 +15,15 @@ type HWCCompiler struct {
 }
 
 func main() {
-	buildDir := os.Args[1]
-	cacheDir := os.Args[2]
-
 	logger := bp.NewLogger()
 
-	compiler, err := bp.NewCompiler(buildDir, cacheDir, logger)
+	compiler, err := bp.NewCompiler(os.Args[1:], logger)
 	err = compiler.CheckBuildpackValid()
+	if err != nil {
+		panic(err)
+	}
+
+	err = compiler.LoadSuppliedDeps()
 	if err != nil {
 		panic(err)
 	}
