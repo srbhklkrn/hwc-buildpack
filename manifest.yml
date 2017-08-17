@@ -12,12 +12,12 @@ include_files:
 - manifest.yml
 default_versions:
 - name: hwc
-  version: 4.0.0
+  version: 4.0.32
 dependencies:
 - name: hwc
-  version: 4.0.0
+  version: 4.0.32
   uri: file://c:/<path-to-custom>/hwc.zip
-  md5: <md5sum of custom hwc zip>
+  md5: <md5sum-of-custom-hwc>
   cf_stacks:
   - windows2012R2
   - windows2016
