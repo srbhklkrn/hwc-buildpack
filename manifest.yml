@@ -1,30 +1,24 @@
 ---
 language: hwc
-exclude_files:
-- ".git/"
-- ".gitignore"
-- ".gitmodules"
-- ".rspec"
-- cf_spec/
-- log/
-- test/
-- buildpack-packager/
-- hwc_buildpack-*v*.zip
-- scripts/
-- src/
-- cf.Gemfile
-- cf.Gemfile.lock
-- ".envrc"
-- pkg/
+include_files:
+- VERSION
+- LICENSE
+- bin/detect
+- bin/detect.bat
+- bin/detect.ps1
+- bin/release.bat
+- bin/compile
+- bin/compile.exe
+- manifest.yml
 default_versions:
 - name: hwc
   version: 4.0.0
 dependencies:
 - name: hwc
   version: 4.0.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/hwc/hwc-4.0.0-windows-amd64-ab04e5b2.zip
-  md5: ab04e5b20dee0c8d2bec2759333eb1fb
+  uri: file://c:/<path-to-custom>/hwc.zip
+  md5: <md5sum of custom hwc zip>
   cf_stacks:
   - windows2012R2
   - windows2016
-pre_package: scripts/build.sh
+pre_package: ["powershell.exe", "scripts/build.ps1"]
