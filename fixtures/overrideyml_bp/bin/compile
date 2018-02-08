@@ -1,0 +1,2 @@
+echo "Supply only buildpack"
+exit 1
