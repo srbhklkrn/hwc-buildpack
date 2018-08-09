@@ -19,9 +19,10 @@ include_files:
 - README.md
 - VERSION
 - bin/compile
-- bin/compile.exe
 - bin/detect
 - bin/detect.bat
 - bin/detect.ps1
 - bin/release.bat
+- bin/finalize.exe
+- bin/supply.exe
 - manifest.yml

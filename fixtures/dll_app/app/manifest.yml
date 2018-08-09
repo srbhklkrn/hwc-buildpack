@@ -1,0 +1,10 @@
+applications:
+- name: app
+  buildpacks:
+  - hwc_mysql_buildpack
+  - hwc_buildpack
+  command: .\app.exe
+  disk_quota: 1G
+  health-check-type: none
+  instances: 1
+  stack: windows2016
