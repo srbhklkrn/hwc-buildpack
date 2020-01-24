@@ -11,6 +11,10 @@ import (
 	"github.com/cloudfoundry/libbuildpack"
 )
 
+func init() {
+	os.Setenv("TZ", "Africa/Cairo")
+}
+
 func main() {
 	logger := libbuildpack.NewLogger(os.Stdout)
 

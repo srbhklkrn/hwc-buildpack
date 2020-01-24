@@ -20,6 +20,7 @@ func init() {
 		libbuildpack.AddHook(hooks1{})
 		libbuildpack.AddHook(hooks2{})
 	}
+	os.Setenv("TZ", "Africa/Cairo")
 }
 
 func (h hooks1) BeforeCompile(compiler *libbuildpack.Stager) error {
